@@ -5,7 +5,7 @@ repo with some global information about my SUT.
 HOW TO RUN:
 First of all, make sure minikube is installed and running(https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download)
 
-
+**Starting the app**
 In order to run all of these
 
 Apply the JWT Secret:
@@ -32,7 +32,7 @@ kubectl apply -f gateway.yaml
 Check the Status of Your Resources:
 kubectl get all
 
-2. Accessing the Application
+**Accessing the Application**
 Once all the resources are applied and running, you should be able to access your services as follows:
 
 UserService: This service will be exposed on the userservice-service NodePort, as specified in your Kubernetes YAML configuration. You can access it through the IP of the Kubernetes node and the port assigned by Kubernetes (which can be obtained by running kubectl get svc).
