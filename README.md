@@ -37,12 +37,8 @@ Once all the resources are applied and running, you should be able to access you
 
 UserService: This service will be exposed on the userservice-service NodePort, as specified in your Kubernetes YAML configuration. You can access it through the IP of the Kubernetes node and the port assigned by Kubernetes (which can be obtained by running kubectl get svc).
 
-Gateway: The gateway should route requests to the user-service based on the path prefixes (/user/**, /match/**, etc.). You can test the routes like this:
+Gateway: The gateway should route requests to the user-service based on the path prefixes (/user/**, /match/**, etc.). You can test the routes described in enpoints.yaml
 
-http://<node-ip>:<gateway-node-port>/user/...
-http://<node-ip>:<gateway-node-port>/match/...
-http://<node-ip>:<gateway-node-port>/auth/...
-Replace <node-ip> and <gateway-node-port> with the appropriate values. You can find the correct IP and port using kubectl get svc for your services.
 
 Additional Tips:
 Ensure kubectl is configured properly: Make sure you have kubectl configured to interact with your Kubernetes cluster. Run kubectl config view to check your current context.
