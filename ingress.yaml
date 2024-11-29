@@ -7,16 +7,16 @@ metadata:
 spec:
   tls:
   - hosts:
-    - 192.168.168.44
+    - tucity.local
     secretName: tls-secret
   rules:
-  - host: 192.168.168.44
+  - host: tucity.local
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: gateway-service
+            name: your-service-name
             port:
               number: 8080
